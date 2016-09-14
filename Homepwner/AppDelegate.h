@@ -1,11 +1,6 @@
-//
-//  AppDelegate.h
-//  Homepwner
-//
-//  Created by Neil Vitale on 9/14/16.
-//  Copyright © 2016 Neil Vitale. All rights reserved.
-//
 
+#import "ItemStore.h"
+#import "ItemsViewController.h"
 #import <UIKit/UIKit.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>

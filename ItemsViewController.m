@@ -1,37 +1,49 @@
-//
-//  ItemsViewController.m
-//  Homepwner
-//
-//  Created by Neil Vitale on 9/14/16.
-//  Copyright © 2016 Neil Vitale. All rights reserved.
-//
 
 #import "ItemsViewController.h"
-
+#import "ItemStore.h"
+#import "Item.h"
 @interface ItemsViewController ()
+
 
 @end
 
 @implementation ItemsViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+-(void)viewDidLoad {
+	[super viewDidLoad];
+	
+	// Get the height of the status bar
+	
+	CGFloat statusBarHeight = [UIApplication sharedApplication].statusBarFrame.size.height;
+	
+	UIEdgeInsets insets = UIEdgeInsetsMake(statusBarHeight, 0, 0, 0);
+	self.tableView.contentInset = insets;
+	self.tableView.scrollIndicatorInsets = insets;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+// MARK: - Table View Data Source and Delegate
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.itemStore.allItems.count;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(UITableViewCell *)tableView:(UITableView *)tableView
+        cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+// Get a new or recycled cell
+			UITableViewCell *Cell = [self.tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"
+				forIndexPath:indexPath];    
+    Item *item = self.itemStore.allItems[indexPath.row];
+    
+    Cell.textLabel.text = item.name;
+    Cell.detailTextLabel.text = [NSString stringWithFormat:@"$%d", item.valueInDollars];
+    return Cell;
 }
-*/
+
+// MARK: - Actions
+- (IBAction)addNewItem:(id)sender {
+}
+- (IBAction)toggleEditingMode:(id)sender {
+}
+
 
 @end

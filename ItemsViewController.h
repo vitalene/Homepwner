@@ -1,13 +1,10 @@
-//
-//  ItemsViewController.h
-//  Homepwner
-//
-//  Created by Neil Vitale on 9/14/16.
-//  Copyright © 2016 Neil Vitale. All rights reserved.
-//
 
 #import <UIKit/UIKit.h>
+@class ItemStore;
+@interface ItemsViewController : UITableViewController
+@property (nonatomic) ItemStore *itemStore;
 
-@interface ItemsViewController : UIViewController
+
+//@property(nonatomic) UITableView *tableView;
 
 @end

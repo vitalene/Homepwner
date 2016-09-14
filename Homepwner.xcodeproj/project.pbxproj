@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		28FC798B1D898789003DB213 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 28FC798A1D898789003DB213 /* main.m */; };
 		28FC798E1D898789003DB213 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 28FC798D1D898789003DB213 /* AppDelegate.m */; };
-		28FC79911D898789003DB213 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28FC79901D898789003DB213 /* ViewController.m */; };
 		28FC79941D898789003DB213 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28FC79921D898789003DB213 /* Main.storyboard */; };
 		28FC79961D898789003DB213 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28FC79951D898789003DB213 /* Assets.xcassets */; };
 		28FC79991D898789003DB213 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28FC79971D898789003DB213 /* LaunchScreen.storyboard */; };
+		28FC79A21D8988DE003DB213 /* ItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28FC79A11D8988DE003DB213 /* ItemsViewController.m */; };
+		28FC79A51D898A94003DB213 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 28FC79A41D898A94003DB213 /* Item.m */; };
+		28FC79A81D898CF3003DB213 /* ItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 28FC79A71D898CF3003DB213 /* ItemStore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +22,16 @@
 		28FC798A1D898789003DB213 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		28FC798C1D898789003DB213 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		28FC798D1D898789003DB213 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		28FC798F1D898789003DB213 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		28FC79901D898789003DB213 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		28FC79931D898789003DB213 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		28FC79951D898789003DB213 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28FC79981D898789003DB213 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		28FC799A1D898789003DB213 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28FC79A01D8988DE003DB213 /* ItemsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemsViewController.h; sourceTree = "<group>"; };
+		28FC79A11D8988DE003DB213 /* ItemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemsViewController.m; sourceTree = "<group>"; };
+		28FC79A31D898A94003DB213 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
+		28FC79A41D898A94003DB213 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
+		28FC79A61D898CF3003DB213 /* ItemStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemStore.h; sourceTree = "<group>"; };
+		28FC79A71D898CF3003DB213 /* ItemStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemStore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +48,12 @@
 		28FC797D1D898789003DB213 = {
 			isa = PBXGroup;
 			children = (
+				28FC79A01D8988DE003DB213 /* ItemsViewController.h */,
+				28FC79A31D898A94003DB213 /* Item.h */,
+				28FC79A61D898CF3003DB213 /* ItemStore.h */,
+				28FC79A71D898CF3003DB213 /* ItemStore.m */,
+				28FC79A41D898A94003DB213 /* Item.m */,
+				28FC79A11D8988DE003DB213 /* ItemsViewController.m */,
 				28FC79881D898789003DB213 /* Homepwner */,
 				28FC79871D898789003DB213 /* Products */,
 			);
@@ -60,8 +72,6 @@
 			children = (
 				28FC798C1D898789003DB213 /* AppDelegate.h */,
 				28FC798D1D898789003DB213 /* AppDelegate.m */,
-				28FC798F1D898789003DB213 /* ViewController.h */,
-				28FC79901D898789003DB213 /* ViewController.m */,
 				28FC79921D898789003DB213 /* Main.storyboard */,
 				28FC79951D898789003DB213 /* Assets.xcassets */,
 				28FC79971D898789003DB213 /* LaunchScreen.storyboard */,
@@ -150,9 +160,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28FC79911D898789003DB213 /* ViewController.m in Sources */,
+				28FC79A51D898A94003DB213 /* Item.m in Sources */,
+				28FC79A21D8988DE003DB213 /* ItemsViewController.m in Sources */,
 				28FC798E1D898789003DB213 /* AppDelegate.m in Sources */,
 				28FC798B1D898789003DB213 /* main.m in Sources */,
+				28FC79A81D898CF3003DB213 /* ItemStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
