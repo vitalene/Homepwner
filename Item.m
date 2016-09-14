@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  Item.m
 //  Homepwner
 //
 //  Created by Neil Vitale on 9/14/16.
 //  Copyright © 2016 Neil Vitale. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "Item.h"
 
-@interface ViewController : UIViewController
-
+@implementation Item
 
 @end
-
