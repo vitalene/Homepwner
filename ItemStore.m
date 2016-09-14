@@ -14,11 +14,8 @@
     self = [super init];
     if (self) {
         _items = [NSMutableArray array];
-        
-        for (int i = 0; i < 5; i++) {
-            [self createItem];
+   
         }
-    }
     return self;
 }
 
@@ -32,5 +29,8 @@
     return newItem;
 }
 
+- (void)removeItem:(Item *)item {
+    [self.items removeObject:item];
+}
 
 @end

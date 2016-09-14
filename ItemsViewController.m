@@ -10,15 +10,15 @@
 @implementation ItemsViewController
 
 -(void)viewDidLoad {
-	[super viewDidLoad];
-	
-	// Get the height of the status bar
-	
-	CGFloat statusBarHeight = [UIApplication sharedApplication].statusBarFrame.size.height;
-	
-	UIEdgeInsets insets = UIEdgeInsetsMake(statusBarHeight, 0, 0, 0);
-	self.tableView.contentInset = insets;
-	self.tableView.scrollIndicatorInsets = insets;
+    [super viewDidLoad];
+    
+    // Get the height of the status bar
+    
+    CGFloat statusBarHeight = [UIApplication sharedApplication].statusBarFrame.size.height;
+    
+    UIEdgeInsets insets = UIEdgeInsetsMake(statusBarHeight, 0, 0, 0);
+    self.tableView.contentInset = insets;
+    self.tableView.scrollIndicatorInsets = insets;
 }
 
 
@@ -29,9 +29,9 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView
         cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-// Get a new or recycled cell
-			UITableViewCell *Cell = [self.tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"
-				forIndexPath:indexPath];    
+    // Get a new or recycled cell
+    UITableViewCell *Cell = [self.tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"
+                                                                 forIndexPath:indexPath];
     Item *item = self.itemStore.allItems[indexPath.row];
     
     Cell.textLabel.text = item.name;
@@ -41,6 +41,16 @@
 
 // MARK: - Actions
 - (IBAction)addNewItem:(id)sender {
+    // create a new item and add it to the store
+    Item *newItem = [self.itemStore createItem];
+    
+    //figure out where the item is in the array
+    NSUInteger itemIndex = [self.itemStore.allItems indexOfObject:newItem];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:itemIndex inSection:0];
+    
+    // insert this row into the table
+    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    
 }
 - (IBAction)toggleEditingMode:(id)sender {
     // if you are currently in editing mode
@@ -58,5 +68,18 @@
     
 }
 
+- (void)tableView:(UITableView *)tableView
+commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
+forRowAtIndexPath:(NSIndexPath *)indexPath {
+    // If the table view is asking to commit a delete command...
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        Item *item = self.itemStore.allItems[indexPath.row];
+        // Remove the item from the store
+        [self.itemStore removeItem:item];
+        // Also remove its cell from the table view
+        [self.tableView deleteRowsAtIndexPaths:@[indexPath]
+                              withRowAnimation:UITableViewRowAnimationAutomatic];
+    }
+}
 
 @end
