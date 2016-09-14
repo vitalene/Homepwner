@@ -6,4 +6,6 @@
 - (void)removeItem:(Item *)item;
 - (NSArray *)allItems;
 - (Item *)createItem;
+- (void)moveItemAtIndex:(NSUInteger)oldIndex
+                toIndex:(NSUInteger)newIndex;
 @end
