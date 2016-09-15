@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28DFB7421D8A13CA007B629D /* ItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DFB7411D8A13CA007B629D /* ItemCell.m */; };
 		28FC798B1D898789003DB213 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 28FC798A1D898789003DB213 /* main.m */; };
 		28FC798E1D898789003DB213 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 28FC798D1D898789003DB213 /* AppDelegate.m */; };
 		28FC79941D898789003DB213 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28FC79921D898789003DB213 /* Main.storyboard */; };
@@ -18,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		28DFB7401D8A13CA007B629D /* ItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemCell.h; sourceTree = "<group>"; };
+		28DFB7411D8A13CA007B629D /* ItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemCell.m; sourceTree = "<group>"; };
 		28FC79861D898789003DB213 /* Homepwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homepwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28FC798A1D898789003DB213 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		28FC798C1D898789003DB213 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -49,6 +52,8 @@
 			isa = PBXGroup;
 			children = (
 				28FC79A01D8988DE003DB213 /* ItemsViewController.h */,
+				28DFB7401D8A13CA007B629D /* ItemCell.h */,
+				28DFB7411D8A13CA007B629D /* ItemCell.m */,
 				28FC79A31D898A94003DB213 /* Item.h */,
 				28FC79A61D898CF3003DB213 /* ItemStore.h */,
 				28FC79A71D898CF3003DB213 /* ItemStore.m */,
@@ -160,6 +165,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28DFB7421D8A13CA007B629D /* ItemCell.m in Sources */,
 				28FC79A51D898A94003DB213 /* Item.m in Sources */,
 				28FC79A21D8988DE003DB213 /* ItemsViewController.m in Sources */,
 				28FC798E1D898789003DB213 /* AppDelegate.m in Sources */,
@@ -319,6 +325,7 @@
 				28FC799F1D898789003DB213 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
