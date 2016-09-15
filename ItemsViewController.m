@@ -130,4 +130,10 @@ moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
         dvc.item = item;
     }
 }
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
+}
 @end
