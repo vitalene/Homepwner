@@ -49,11 +49,11 @@
                                 <rect key="frame" x="0.0" y="88" width="375" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IFN-Ii-xyc" id="1Hh-Ga-aMC">
-                                    <frame key="frameInset" width="375" height="64.5"/>
+                                    <frame key="frameInset" width="375" height="64"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xYI-lE-IHN">
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xYI-lE-IHN">
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -62,9 +62,8 @@
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vXm-vN-rhr">
-                                            <frame key="frameInset" minX="313" minY="22" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vXm-vN-rhr">
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -73,6 +72,7 @@
                                         <constraint firstItem="vXm-vN-rhr" firstAttribute="centerY" secondItem="1Hh-Ga-aMC" secondAttribute="centerY" id="FKP-Tq-6V8"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="alr-aV-LhB" secondAttribute="bottom" constant="0.5" id="M73-rN-cXb"/>
                                         <constraint firstItem="xYI-lE-IHN" firstAttribute="top" secondItem="1Hh-Ga-aMC" secondAttribute="topMargin" id="ccn-lx-GLu"/>
+                                        <constraint firstItem="alr-aV-LhB" firstAttribute="top" secondItem="xYI-lE-IHN" secondAttribute="bottom" constant="6" id="eGq-Sx-2gU"/>
                                         <constraint firstItem="xYI-lE-IHN" firstAttribute="leading" secondItem="1Hh-Ga-aMC" secondAttribute="leadingMargin" constant="22" id="lcl-la-Sce"/>
                                         <constraint firstItem="alr-aV-LhB" firstAttribute="leading" secondItem="xYI-lE-IHN" secondAttribute="leading" id="pXE-Cm-aOs"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="vXm-vN-rhr" secondAttribute="trailing" constant="20" id="yPF-YI-6GG"/>

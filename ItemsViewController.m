@@ -21,8 +21,8 @@
     self.tableView.contentInset = insets;
     self.tableView.scrollIndicatorInsets = insets;
     
-    self.tableView.rowHeight = 65;
-}
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight = 65;}
 
 
 // MARK: - Table View Data Source and Delegate
@@ -36,6 +36,8 @@
     ItemCell *cell =
     [self.tableView dequeueReusableCellWithIdentifier:@"ItemCell"
                                          forIndexPath:indexPath];
+    // Update the labels in case the dynamic font sizes have changed recently
+    [cell updateLabels];
     Item *item = self.itemStore.allItems[indexPath.row];
     cell.nameLabel.text = item.name;
     cell.serialNumberLabel.text = item.serialNumber;
