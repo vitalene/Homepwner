@@ -59,7 +59,11 @@
     [textField resignFirstResponder];
     return YES;
 }
-
+// MARK: - Accessors
+- (void)setItem:(Item *)item {
+    _item = item;
+    self.navigationItem.title = item.name;
+}
 
 - (IBAction)backgroundTapped:(UITapGestureRecognizer *)sender {
     [self.view endEditing:YES];

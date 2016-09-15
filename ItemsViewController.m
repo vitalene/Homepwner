@@ -131,6 +131,15 @@ moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
     }
 }
 
+// MARK: - Initializers
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        self.navigationItem.leftBarButtonItem = [self editButtonItem];
+    }
+    return self;
+}
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
