@@ -16,11 +16,6 @@
     
     // Get the height of the status bar
     
-    CGFloat statusBarHeight = [UIApplication sharedApplication].statusBarFrame.size.height;
-    
-    UIEdgeInsets insets = UIEdgeInsetsMake(statusBarHeight, 0, 0, 0);
-    self.tableView.contentInset = insets;
-    self.tableView.scrollIndicatorInsets = insets;
     
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 65;}
@@ -59,21 +54,7 @@
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
     
 }
-- (IBAction)toggleEditingMode:(id)sender {
-    // if you are currently in editing mode
-    if (self.editing) {
-        // change the text of the button to inform the user
-        [sender setTitle:@"Edit" forState:UIControlStateNormal];
-        // turn off editing mode
-        [self setEditing:NO animated:YES];
-    } else {
-        // change the text of the button to inform the user
-        [sender setTitle:@"Done" forState:UIControlStateNormal];
-        // turn on editing mode
-        [self setEditing:YES animated:YES];
-    }
-    
-}
+
 
 - (void)tableView:(UITableView *)tableView
 commitEditingStyle:(UITableViewCellEditingStyle)editingStyle

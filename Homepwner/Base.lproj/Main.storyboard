@@ -15,38 +15,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="YFD-ad-h8j">
-                            <rect key="frame" x="0.0" y="64" width="375" height="60"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9gB-gj-PXb">
-                                    <frame key="frameInset" minX="23" minY="15" width="30" height="30"/>
-                                    <state key="normal" title="Edit"/>
-                                    <connections>
-                                        <action selector="toggleEditingMode:" destination="K9D-vt-5L8" eventType="touchUpInside" id="UXs-90-g2a"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sRl-T3-JB5">
-                                    <frame key="frameInset" minX="303" minY="15" width="30" height="30"/>
-                                    <state key="normal" title="Add"/>
-                                    <connections>
-                                        <action selector="addNewItem:" destination="K9D-vt-5L8" eventType="touchUpInside" id="8oB-kz-fnv"/>
-                                    </connections>
-                                </button>
-                            </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstItem="sRl-T3-JB5" firstAttribute="centerY" secondItem="YFD-ad-h8j" secondAttribute="centerY" id="D80-oO-tpZ"/>
-                                <constraint firstAttribute="trailing" secondItem="sRl-T3-JB5" secondAttribute="trailing" constant="8" id="Eww-2E-Wrg"/>
-                                <constraint firstItem="sRl-T3-JB5" firstAttribute="leading" secondItem="9gB-gj-PXb" secondAttribute="trailing" constant="8" id="Kqf-Iy-adx"/>
-                                <constraint firstItem="9gB-gj-PXb" firstAttribute="centerY" secondItem="YFD-ad-h8j" secondAttribute="centerY" id="Nhz-NP-8CF"/>
-                                <constraint firstItem="9gB-gj-PXb" firstAttribute="leading" secondItem="YFD-ad-h8j" secondAttribute="leading" constant="8" id="Tlo-80-a9l"/>
-                                <constraint firstItem="sRl-T3-JB5" firstAttribute="width" secondItem="9gB-gj-PXb" secondAttribute="width" id="oaX-6d-vDD"/>
-                            </constraints>
-                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="65" id="IFN-Ii-xyc" customClass="ItemCell">
-                                <rect key="frame" x="0.0" y="152" width="375" height="65"/>
+                                <rect key="frame" x="0.0" y="92" width="375" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IFN-Ii-xyc" id="1Hh-Ga-aMC">
                                     <frame key="frameInset" width="375" height="64.5"/>
