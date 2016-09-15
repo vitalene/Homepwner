@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28B040BF1D8AEB7F00C5887F /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B040BE1D8AEB7F00C5887F /* DetailViewController.m */; };
 		28DFB7421D8A13CA007B629D /* ItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DFB7411D8A13CA007B629D /* ItemCell.m */; };
 		28FC798B1D898789003DB213 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 28FC798A1D898789003DB213 /* main.m */; };
 		28FC798E1D898789003DB213 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 28FC798D1D898789003DB213 /* AppDelegate.m */; };
@@ -19,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		28B040BD1D8AEB7F00C5887F /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		28B040BE1D8AEB7F00C5887F /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		28DFB7401D8A13CA007B629D /* ItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemCell.h; sourceTree = "<group>"; };
 		28DFB7411D8A13CA007B629D /* ItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemCell.m; sourceTree = "<group>"; };
 		28FC79861D898789003DB213 /* Homepwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homepwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +81,8 @@
 				28FC798C1D898789003DB213 /* AppDelegate.h */,
 				28FC798D1D898789003DB213 /* AppDelegate.m */,
 				28FC79921D898789003DB213 /* Main.storyboard */,
+				28B040BD1D8AEB7F00C5887F /* DetailViewController.h */,
+				28B040BE1D8AEB7F00C5887F /* DetailViewController.m */,
 				28FC79951D898789003DB213 /* Assets.xcassets */,
 				28FC79971D898789003DB213 /* LaunchScreen.storyboard */,
 				28FC799A1D898789003DB213 /* Info.plist */,
@@ -171,6 +176,7 @@
 				28FC798E1D898789003DB213 /* AppDelegate.m in Sources */,
 				28FC798B1D898789003DB213 /* main.m in Sources */,
 				28FC79A81D898CF3003DB213 /* ItemStore.m in Sources */,
+				28B040BF1D8AEB7F00C5887F /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
