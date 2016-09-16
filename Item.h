@@ -7,7 +7,7 @@
 @property (copy, nonatomic) NSString *serialNumber;
 @property (nonatomic) int valueInDollars;
 @property (nonatomic) NSDate *dateCreated;
-
+- (instancetype)initWithCoder:(NSCoder *)aDecoder NS_DESIGNATED_INITIALIZER;
 
 - (instancetype)initWithName:(NSString *)name
                 serialNumber:(NSString *)serialNumber
