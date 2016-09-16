@@ -1,6 +1,7 @@
 
 #import "ItemStore.h"
 #import "item.h"
+#import <Foundation/Foundation.h>
 
 @interface ItemStore ()
 @property (nonatomic) NSMutableArray *items;

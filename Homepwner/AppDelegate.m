@@ -1,13 +1,6 @@
-//
-//  AppDelegate.m
-//  Homepwner
-//
-//  Created by Neil Vitale on 9/14/16.
-//  Copyright © 2016 Neil Vitale. All rights reserved.
-//
 
 #import "AppDelegate.h"
-
+#import "ImageStore.h"
 @interface AppDelegate ()
 
 @end
@@ -18,9 +11,14 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Create an ItemStore
     ItemStore *itemStore = [ItemStore new];
+    // Create an ImageStore
+    ImageStore *imageStore = [ImageStore new];
     // Access the ItemsViewController
     UINavigationController *navController
-    = (UINavigationController *)self.window.rootViewController; ItemsViewController *ivc = (ItemsViewController *)navController.topViewController;    ivc.itemStore = itemStore;
+    = (UINavigationController *)self.window.rootViewController;
+    ItemsViewController *ivc = (ItemsViewController *)navController.topViewController;
+    ivc.itemStore = itemStore;
+    ivc.imageStore = imageStore;
     return YES;
 }
 

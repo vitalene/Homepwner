@@ -1,12 +1,16 @@
 
 #import "DetailViewController.h"
 #import "Item.h"
-@interface DetailViewController () <UITextFieldDelegate>
+#import "ImageStore.h"
+@interface DetailViewController () <UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+@property (copy, nonatomic) NSString *itemKey;
 @property (strong, nonatomic) IBOutlet UITextField *nameField;
 @property (strong, nonatomic) IBOutlet UITextField *serialNumberField;
 @property (strong, nonatomic) IBOutlet UITextField *valueField;
 @property (strong, nonatomic) IBOutlet UILabel *dateLabel;
 - (IBAction)backgroundTapped:(UITapGestureRecognizer *)sender;
+@property (strong, nonatomic) IBOutlet UIImageView *imageView;
+- (IBAction)cameraButtonTapped:(UIBarButtonItem *)sender;
 
 @end
 
@@ -18,6 +22,13 @@
     self.valueField.text =
     [[self valueFormatter] stringFromNumber:@(self.item.valueInDollars)];
     self.dateLabel.text = [[self dateFormatter] stringFromDate:self.item.dateCreated];
+    
+    // Get the item key
+    NSString *key = self.item.itemKey;
+    // If the item has an associated image,
+    // display it on the image view
+    UIImage *imageToDisplay = [self.imageStore imageForKey:key];
+    self.imageView.image = imageToDisplay;
 }
 
 // MARK: - Formatters
@@ -68,5 +79,34 @@
 - (IBAction)backgroundTapped:(UITapGestureRecognizer *)sender {
     [self.view endEditing:YES];
 }
+- (IBAction)cameraButtonTapped:(UIBarButtonItem *)sender {
+    
+    UIImagePickerController *ipc = [UIImagePickerController new];
+    // If the device has a camera, take a picture.
+    if ([UIImagePickerController
+         isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        ipc.sourceType = UIImagePickerControllerSourceTypeCamera;
+    } else { // Otherwise, just pick a photo from teh library.
+        ipc.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    }
+    
+    ipc.delegate = self;
+    // Put the picker on the screen
+    [self presentViewController:ipc animated:YES completion:nil];
+}
+
+// MARK: - Image Picker Delegate
+- (void)imagePickerController:(UIImagePickerController *)picker
+didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
+    // Get the image from the info dictionary
+    UIImage *image = (UIImage *)info[UIImagePickerControllerOriginalImage];
+    // Store the image in the ImageStore by the item's itemKey
+    [self.imageStore setImage:image forKey:self.item.itemKey];
+    // Put the image on the screen in the image view
+    self.imageView.image = image;
+    // Dismiss the image picker now that you're done with it
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 @end
 
